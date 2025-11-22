@@ -2,8 +2,21 @@
 *.tfstate
 *.tfstate.*
 .terraform.lock.hcl
+
+# Lambda build artifacts
 **/lambda_package.zip
+
 *.tfvars
 crash.log
+crash.*.log
 *.plan
 *.tfstate.backup
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# OS/editor
+.DS_Store
+Thumbs.db
+.vscode/
