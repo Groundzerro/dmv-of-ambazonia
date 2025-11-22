@@ -19,6 +19,10 @@ module "iam" {
   dynamodb_table_arn = module.dynamodb_config.table_arn
   aws_region         = var.aws_region
   account_id         = data.aws_caller_identity.current.account_id
+
+  # instance_id            = var.connect_instance_id
+  function_name     = module.lambda_config_loader.function_name
+  lambda_depends_on = [module.lambda_config_loader]
 }
 
 module "lambda_config_loader" {
@@ -34,7 +38,7 @@ module "lambda_config_loader" {
 resource "aws_lambda_permission" "allow_connect_invoke" {
   statement_id  = "AllowExecutionFromAmazonConnect"
   action        = "lambda:InvokeFunction"
-  function_name = module.lambda_config_loader.lambda_name
+  function_name = module.lambda_config_loader.function_name
   principal     = "connect.amazonaws.com"
   source_arn    = "arn:aws:connect:${var.aws_region}:${data.aws_caller_identity.current.account_id}:instance/${var.connect_instance_id}"
 }

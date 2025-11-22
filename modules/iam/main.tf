@@ -46,9 +46,14 @@ resource "aws_iam_role_policy_attachment" "lambda_policy_attach" {
 
 # Allow Amazon Connect to invoke this Lambda
 resource "aws_lambda_permission" "allow_connect_invoke" {
-  statement_id  = "AllowExecutionFromAmazonConnect"
-  action        = "lambda:InvokeFunction"
-  function_name = aws_iam_role.lambda_exec.name # We'll override this in root; see below
+  statement_id = "AllowExecutionFromAmazonConnect"
+  action       = "lambda:InvokeFunction"
+  # function_name = aws_iam_role.lambda_exec.name # We'll override this in root; see below
+  function_name = var.function_name
   principal     = "connect.amazonaws.com"
   source_arn    = "arn:aws:connect:${var.aws_region}:${var.account_id}:instance/*"
+
+  #source_arn    = "arn:aws:connect:us-west-2:${data.aws_caller_identity.current.account_id}:instance/${var.instance_id}"
+  depends_on = [var.lambda_depends_on]
 }
+

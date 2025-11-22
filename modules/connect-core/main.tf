@@ -1,3 +1,8 @@
+resource "time_sleep" "wait_for_hours" {
+  depends_on      = [aws_connect_hours_of_operation.dmv_hours]
+  create_duration = "20s"
+}
+
 resource "aws_connect_hours_of_operation" "dmv_hours" {
   instance_id = var.instance_id
   name        = "${var.project_name}-hours"
@@ -30,6 +35,8 @@ resource "aws_connect_queue" "dl_new_renew" {
   name                  = "DL-NEW-RENEW"
   description           = "Driver licensing new and renewals"
   hours_of_operation_id = aws_connect_hours_of_operation.dmv_hours.id
+
+  depends_on = [time_sleep.wait_for_hours]
 }
 
 resource "aws_connect_queue" "vehicle_reg" {
@@ -37,6 +44,8 @@ resource "aws_connect_queue" "vehicle_reg" {
   name                  = "VEHICLE-REG"
   description           = "Vehicle registration and plates"
   hours_of_operation_id = aws_connect_hours_of_operation.dmv_hours.id
+
+  depends_on = [time_sleep.wait_for_hours]
 }
 
 resource "aws_connect_queue" "road_test" {
@@ -44,6 +53,8 @@ resource "aws_connect_queue" "road_test" {
   name                  = "ROAD-TEST"
   description           = "Road test scheduling"
   hours_of_operation_id = aws_connect_hours_of_operation.dmv_hours.id
+
+  depends_on = [time_sleep.wait_for_hours]
 }
 
 resource "aws_connect_queue" "fines_citations" {
@@ -51,6 +62,8 @@ resource "aws_connect_queue" "fines_citations" {
   name                  = "FINES-CITATIONS"
   description           = "Fines, citations, suspensions"
   hours_of_operation_id = aws_connect_hours_of_operation.dmv_hours.id
+
+  depends_on = [time_sleep.wait_for_hours]
 }
 
 resource "aws_connect_queue" "general" {
@@ -58,6 +71,8 @@ resource "aws_connect_queue" "general" {
   name                  = "GENERAL-INQUIRY"
   description           = "General inquiries / operator"
   hours_of_operation_id = aws_connect_hours_of_operation.dmv_hours.id
+
+  depends_on = [time_sleep.wait_for_hours]
 }
 
 resource "aws_connect_routing_profile" "dmv_agents" {
