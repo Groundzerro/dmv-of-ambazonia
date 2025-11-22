@@ -1,0 +1,9 @@
+.terraform/
+*.tfstate
+*.tfstate.*
+.terraform.lock.hcl
+**/lambda_package.zip
+*.tfvars
+crash.log
+*.plan
+*.tfstate.backup

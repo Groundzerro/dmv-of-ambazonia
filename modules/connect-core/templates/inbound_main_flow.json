@@ -1,0 +1,594 @@
+{
+    "Version": "2019-10-30",
+    "StartAction": "log activities",
+    "Metadata": {
+      "entryPointPosition": {
+        "x": -490.4,
+        "y": -365.6
+      },
+      "ActionMetadata": {
+        "e4e9b79f-5d03-4571-af74-6010526fbd90": {
+          "position": {
+            "x": 2278.4,
+            "y": 617.6
+          }
+        },
+        "Error play prompt": {
+          "position": {
+            "x": 1996.8,
+            "y": 493.6
+          },
+          "isFriendlyName": true
+        },
+        "5d788de9-4987-4187-b7d1-9ef524c0f09f": {
+          "position": {
+            "x": 1406.4,
+            "y": 766.4
+          }
+        },
+        "To Drivers License": {
+          "position": {
+            "x": 1725.6,
+            "y": 125.6
+          },
+          "isFriendlyName": true,
+          "parameters": {
+            "ContactFlowId": {
+              "displayName": "Sample Queue Configurations Flow"
+            }
+          },
+          "ContactFlow": {
+            "text": "Sample Queue Configurations Flow"
+          }
+        },
+        "To Vehicle Registration": {
+          "position": {
+            "x": 1724,
+            "y": 324
+          },
+          "isFriendlyName": true,
+          "parameters": {
+            "ContactFlowId": {
+              "displayName": "Sample queue configurations flow"
+            }
+          },
+          "ContactFlow": {
+            "text": "Sample queue configurations flow"
+          }
+        },
+        "To Road Test": {
+          "position": {
+            "x": 1722.4,
+            "y": 509.6
+          },
+          "isFriendlyName": true,
+          "parameters": {
+            "ContactFlowId": {
+              "displayName": "Sample queue configurations flow"
+            }
+          },
+          "ContactFlow": {
+            "text": "Sample queue configurations flow"
+          }
+        },
+        "To Fines and Citations": {
+          "position": {
+            "x": 1721.6,
+            "y": 676
+          },
+          "isFriendlyName": true,
+          "parameters": {
+            "ContactFlowId": {
+              "displayName": "Sample queue configurations flow"
+            }
+          },
+          "ContactFlow": {
+            "text": "Sample queue configurations flow"
+          }
+        },
+        "083f0713-bee3-46e4-8e75-45bc860d0001": {
+          "position": {
+            "x": 1136,
+            "y": 460
+          }
+        },
+        "Department choices": {
+          "position": {
+            "x": 1393.6,
+            "y": 311.2
+          },
+          "isFriendlyName": true,
+          "conditionMetadata": [
+            {
+              "id": "52a31150-c8c6-4f53-9623-2b6e06bf6d9e",
+              "value": "1"
+            },
+            {
+              "id": "a326ce4b-2152-4851-8fa2-e87ce37f6796",
+              "value": "2"
+            },
+            {
+              "id": "8badc607-c6ee-4107-a9db-e43a95eadc15",
+              "value": "3"
+            },
+            {
+              "id": "46f2a878-9f15-4663-bdf2-e520f921444b",
+              "value": "4"
+            },
+            {
+              "id": "e58786f0-2358-4774-9421-ced979a31f0c",
+              "value": "0"
+            }
+          ]
+        },
+        "set greeting status": {
+          "position": {
+            "x": 904.8,
+            "y": 446.4
+          },
+          "isFriendlyName": true,
+          "dynamicParams": []
+        },
+        "beefac7f-b03a-4ee6-ac32-c2eb8c41177b": {
+          "position": {
+            "x": 1200,
+            "y": -136
+          }
+        },
+        "check greeting status": {
+          "position": {
+            "x": 668.8,
+            "y": 301.6
+          },
+          "isFriendlyName": true,
+          "conditions": [],
+          "conditionMetadata": [
+            {
+              "id": "29f01405-afd8-401b-973e-5d3d96e9034a",
+              "operator": {
+                "name": "Equals",
+                "value": "Equals",
+                "shortDisplay": "="
+              },
+              "value": "true"
+            }
+          ]
+        },
+        "check channel": {
+          "position": {
+            "x": 416.8,
+            "y": -12
+          },
+          "isFriendlyName": true,
+          "conditions": [],
+          "conditionMetadata": [
+            {
+              "id": "6e96268a-96e0-4f08-b84d-6b9285c97dbc",
+              "operator": {
+                "name": "Equals",
+                "value": "Equals",
+                "shortDisplay": "="
+              },
+              "value": "CHAT"
+            },
+            {
+              "id": "af834879-2d39-43d7-987a-7abced6b433c",
+              "operator": {
+                "name": "Equals",
+                "value": "Equals",
+                "shortDisplay": "="
+              },
+              "value": "TASK"
+            }
+          ]
+        },
+        "For disconnect Flow": {
+          "position": {
+            "x": 108,
+            "y": -57.6
+          },
+          "isFriendlyName": true,
+          "parameters": {
+            "EventHooks": {}
+          }
+        },
+        "log activities": {
+          "position": {
+            "x": -376,
+            "y": -228.8
+          },
+          "isFriendlyName": true
+        },
+        "Recording and Analytics behavior": {
+          "position": {
+            "x": -152.8,
+            "y": -84
+          },
+          "isFriendlyName": true
+        }
+      },
+      "Annotations": [],
+      "name": "dmv_inbound_main_flow",
+      "description": "",
+      "type": "contactFlow",
+      "status": "SAVED",
+      "hash": {}
+    },
+    "Actions": [
+      {
+        "Parameters": {},
+        "Identifier": "e4e9b79f-5d03-4571-af74-6010526fbd90",
+        "Type": "DisconnectParticipant",
+        "Transitions": {}
+      },
+      {
+        "Parameters": {
+          "Text": "We're sorry, an error occurred. You will be disconnected. Please call back later. Goodbye."
+        },
+        "Identifier": "Error play prompt",
+        "Type": "MessageParticipant",
+        "Transitions": {
+          "NextAction": "e4e9b79f-5d03-4571-af74-6010526fbd90",
+          "Errors": [
+            {
+              "NextAction": "e4e9b79f-5d03-4571-af74-6010526fbd90",
+              "ErrorType": "NoMatchingError"
+            }
+          ]
+        }
+      },
+      {
+        "Parameters": {
+          "LoopCount": "3"
+        },
+        "Identifier": "5d788de9-4987-4187-b7d1-9ef524c0f09f",
+        "Type": "Loop",
+        "Transitions": {
+          "NextAction": "To Fines and Citations",
+          "Conditions": [
+            {
+              "NextAction": "Department choices",
+              "Condition": {
+                "Operator": "Equals",
+                "Operands": [
+                  "ContinueLooping"
+                ]
+              }
+            },
+            {
+              "NextAction": "To Fines and Citations",
+              "Condition": {
+                "Operator": "Equals",
+                "Operands": [
+                  "DoneLooping"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "Parameters": {
+          "ContactFlowId": "arn:aws:connect:us-west-2:789070729972:instance/5d253be2-f961-4d07-a04d-f9e36e6b5a7b/contact-flow/950df25a-b00d-4b83-bf86-3bb18fbc4359"
+        },
+        "Identifier": "To Drivers License",
+        "Type": "TransferToFlow",
+        "Transitions": {
+          "NextAction": "Error play prompt",
+          "Errors": [
+            {
+              "NextAction": "Error play prompt",
+              "ErrorType": "NoMatchingError"
+            }
+          ]
+        }
+      },
+      {
+        "Parameters": {
+          "ContactFlowId": "arn:aws:connect:us-west-2:789070729972:instance/5d253be2-f961-4d07-a04d-f9e36e6b5a7b/contact-flow/950df25a-b00d-4b83-bf86-3bb18fbc4359"
+        },
+        "Identifier": "To Vehicle Registration",
+        "Type": "TransferToFlow",
+        "Transitions": {
+          "NextAction": "Error play prompt",
+          "Errors": [
+            {
+              "NextAction": "Error play prompt",
+              "ErrorType": "NoMatchingError"
+            }
+          ]
+        }
+      },
+      {
+        "Parameters": {
+          "ContactFlowId": "arn:aws:connect:us-west-2:789070729972:instance/5d253be2-f961-4d07-a04d-f9e36e6b5a7b/contact-flow/950df25a-b00d-4b83-bf86-3bb18fbc4359"
+        },
+        "Identifier": "To Road Test",
+        "Type": "TransferToFlow",
+        "Transitions": {
+          "NextAction": "Error play prompt",
+          "Errors": [
+            {
+              "NextAction": "Error play prompt",
+              "ErrorType": "NoMatchingError"
+            }
+          ]
+        }
+      },
+      {
+        "Parameters": {
+          "ContactFlowId": "arn:aws:connect:us-west-2:789070729972:instance/5d253be2-f961-4d07-a04d-f9e36e6b5a7b/contact-flow/950df25a-b00d-4b83-bf86-3bb18fbc4359"
+        },
+        "Identifier": "To Fines and Citations",
+        "Type": "TransferToFlow",
+        "Transitions": {
+          "NextAction": "Error play prompt",
+          "Errors": [
+            {
+              "NextAction": "Error play prompt",
+              "ErrorType": "NoMatchingError"
+            }
+          ]
+        }
+      },
+      {
+        "Parameters": {
+          "Text": "Hello, thanks for calling the Ambazonia DMV. These are some examples of what the Amazon Connect virtual contact center can enable you to do for your Ambazonia DMV."
+        },
+        "Identifier": "083f0713-bee3-46e4-8e75-45bc860d0001",
+        "Type": "MessageParticipant",
+        "Transitions": {
+          "NextAction": "Department choices",
+          "Errors": [
+            {
+              "NextAction": "Department choices",
+              "ErrorType": "NoMatchingError"
+            }
+          ]
+        }
+      },
+      {
+        "Parameters": {
+          "StoreInput": "False",
+          "InputTimeLimitSeconds": "8",
+          "Text": "Press 1 to be transferred to a Drivers License agent.\nPress 2 to transferred to a Vehicle Registration agent. \nPress 3 to be transferred to a Road Test agent. \nPress 4 to be transferred to a Fines and Citation agent. \nPress 0 to repeat these options."
+        },
+        "Identifier": "Department choices",
+        "Type": "GetParticipantInput",
+        "Transitions": {
+          "NextAction": "5d788de9-4987-4187-b7d1-9ef524c0f09f",
+          "Conditions": [
+            {
+              "NextAction": "To Drivers License",
+              "Condition": {
+                "Operator": "Equals",
+                "Operands": [
+                  "1"
+                ]
+              }
+            },
+            {
+              "NextAction": "To Vehicle Registration",
+              "Condition": {
+                "Operator": "Equals",
+                "Operands": [
+                  "2"
+                ]
+              }
+            },
+            {
+              "NextAction": "To Road Test",
+              "Condition": {
+                "Operator": "Equals",
+                "Operands": [
+                  "3"
+                ]
+              }
+            },
+            {
+              "NextAction": "To Fines and Citations",
+              "Condition": {
+                "Operator": "Equals",
+                "Operands": [
+                  "4"
+                ]
+              }
+            },
+            {
+              "NextAction": "5d788de9-4987-4187-b7d1-9ef524c0f09f",
+              "Condition": {
+                "Operator": "Equals",
+                "Operands": [
+                  "0"
+                ]
+              }
+            }
+          ],
+          "Errors": [
+            {
+              "NextAction": "To Drivers License",
+              "ErrorType": "InputTimeLimitExceeded"
+            },
+            {
+              "NextAction": "5d788de9-4987-4187-b7d1-9ef524c0f09f",
+              "ErrorType": "NoMatchingCondition"
+            },
+            {
+              "NextAction": "5d788de9-4987-4187-b7d1-9ef524c0f09f",
+              "ErrorType": "NoMatchingError"
+            }
+          ]
+        }
+      },
+      {
+        "Parameters": {
+          "Attributes": {
+            "greetingPlayed": "true"
+          },
+          "TargetContact": "Current"
+        },
+        "Identifier": "set greeting status",
+        "Type": "UpdateContactAttributes",
+        "Transitions": {
+          "NextAction": "083f0713-bee3-46e4-8e75-45bc860d0001",
+          "Errors": [
+            {
+              "NextAction": "083f0713-bee3-46e4-8e75-45bc860d0001",
+              "ErrorType": "NoMatchingError"
+            }
+          ]
+        }
+      },
+      {
+        "Parameters": {
+          "Text": "Hello, thanks for contacting us. This is an example of what the Amazon Connect virtual contact center for the DMV of Ambazonia can enable you to do."
+        },
+        "Identifier": "beefac7f-b03a-4ee6-ac32-c2eb8c41177b",
+        "Type": "MessageParticipant",
+        "Transitions": {
+          "NextAction": "To Drivers License",
+          "Errors": [
+            {
+              "NextAction": "To Drivers License",
+              "ErrorType": "NoMatchingError"
+            }
+          ]
+        }
+      },
+      {
+        "Parameters": {
+          "ComparisonValue": "$.Attributes.greetingPlayed"
+        },
+        "Identifier": "check greeting status",
+        "Type": "Compare",
+        "Transitions": {
+          "NextAction": "set greeting status",
+          "Conditions": [
+            {
+              "NextAction": "Department choices",
+              "Condition": {
+                "Operator": "Equals",
+                "Operands": [
+                  "true"
+                ]
+              }
+            }
+          ],
+          "Errors": [
+            {
+              "NextAction": "set greeting status",
+              "ErrorType": "NoMatchingCondition"
+            }
+          ]
+        }
+      },
+      {
+        "Parameters": {
+          "ComparisonValue": "$.Channel"
+        },
+        "Identifier": "check channel",
+        "Type": "Compare",
+        "Transitions": {
+          "NextAction": "check greeting status",
+          "Conditions": [
+            {
+              "NextAction": "beefac7f-b03a-4ee6-ac32-c2eb8c41177b",
+              "Condition": {
+                "Operator": "Equals",
+                "Operands": [
+                  "CHAT"
+                ]
+              }
+            },
+            {
+              "NextAction": "beefac7f-b03a-4ee6-ac32-c2eb8c41177b",
+              "Condition": {
+                "Operator": "Equals",
+                "Operands": [
+                  "TASK"
+                ]
+              }
+            }
+          ],
+          "Errors": [
+            {
+              "NextAction": "check greeting status",
+              "ErrorType": "NoMatchingCondition"
+            }
+          ]
+        }
+      },
+      {
+        "Parameters": {
+          "EventHooks": {
+            "CustomerRemaining": "arn:aws:connect:us-west-2:789070729972:instance/5d253be2-f961-4d07-a04d-f9e36e6b5a7b/contact-flow/d9c0896d-8329-41b7-ab0c-c1428cca41e8"
+          }
+        },
+        "Identifier": "For disconnect Flow",
+        "Type": "UpdateContactEventHooks",
+        "Transitions": {
+          "NextAction": "check channel",
+          "Errors": [
+            {
+              "NextAction": "check channel",
+              "ErrorType": "NoMatchingError"
+            }
+          ]
+        }
+      },
+      {
+        "Parameters": {
+          "FlowLoggingBehavior": "Enabled"
+        },
+        "Identifier": "log activities",
+        "Type": "UpdateFlowLoggingBehavior",
+        "Transitions": {
+          "NextAction": "Recording and Analytics behavior"
+        }
+      },
+      {
+        "Parameters": {
+          "RecordingBehavior": {
+            "RecordedParticipants": [
+              "Agent",
+              "Customer"
+            ],
+            "IVRRecordingBehavior": "Enabled"
+          },
+          "AnalyticsBehavior": {
+            "Enabled": "True",
+            "AnalyticsLanguage": "en-US",
+            "AnalyticsRedactionBehavior": "Enabled",
+            "AnalyticsRedactionResults": "RedactedAndOriginal",
+            "AnalyticsRedactionMaskMode": "EntityType",
+            "ChannelConfiguration": {
+              "Chat": {
+                "AnalyticsModes": [
+                  "ContactLens"
+                ]
+              },
+              "Voice": {
+                "AnalyticsModes": [
+                  "RealTime",
+                  "AutomatedInteraction"
+                ]
+              }
+            },
+            "SummaryConfiguration": {
+              "SummaryModes": [
+                "PostContact"
+              ]
+            },
+            "SentimentConfiguration": {
+              "Enabled": "True"
+            }
+          }
+        },
+        "Identifier": "Recording and Analytics behavior",
+        "Type": "UpdateContactRecordingBehavior",
+        "Transitions": {
+          "NextAction": "For disconnect Flow"
+        }
+      }
+    ]
+  }
