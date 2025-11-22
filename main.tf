@@ -25,6 +25,7 @@ module "iam" {
   lambda_depends_on = [module.lambda_config_loader]
 }
 
+# Lambda function
 module "lambda_config_loader" {
   source              = "./modules/lambda-config-loader"
   function_name       = "${var.project_name}-${var.environment}-config-loader"
