@@ -13,7 +13,7 @@ variable "environment" {
 variable "project_name" {
   type        = string
   description = "Project name prefix"
-  default     = "ambazonia-dmv-connect"
+  default     = "dmv-of-ambazonia"
 }
 
 # Existing Connect instance ID (you already have one)
