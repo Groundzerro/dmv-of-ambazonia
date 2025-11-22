@@ -9,6 +9,7 @@ on:
 env:
   TF_IN_AUTOMATION: true
   AWS_REGION: ${{ vars.AWS_REGION }}
+  TF_VAR_connect_instance_id: ${{ secrets.TF_VAR_connect_instance_id }}
 
 permissions:
   id-token: write     # REQUIRED for OIDC
